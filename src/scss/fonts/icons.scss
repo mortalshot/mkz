@@ -1,0 +1,41 @@
+%ic {
+	font-family: "icomoon";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-close:before {
+	content: "\e900";
+}
+._icon-search:before {
+	content: "\e922";
+}
+._icon-link:before {
+	content: "\e921";
+}
+._icon-slider-arrow-right:before {
+	content: "\e923";
+}
+._icon-slider-arrow-right-2:before {
+	content: "\e924";
+}
+._icon-youtube:before {
+	content: "\e925";
+}
+._icon-facebook1:before {
+	content: "\e927";
+}
+._icon-kan:before {
+	content: "\e928";
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="single-project">
+                <div class="single-project__container">
+                    <div class="back">
+                        <a href="" class="back__link _icon-slider-arrow-right-2"> <span>Назад</span> </a>
+                    </div>
+
+                    <div class="single-project__slider project-slider">
+                        <div class="project-slider__swiper">
+                            <div class="project-slider__slide swiper-lazy" data-background="img/pages/projects/projects-1-1.jpg" >
+                                <div class="swiper-lazy-preloader"></div>
+                            </div>
+                            <div class="project-slider__slide swiper-lazy" data-background="img/pages/projects/projects-2-1.jpg" >
+                                <div class="swiper-lazy-preloader"></div>
+                            </div>
+                            <div class="project-slider__slide swiper-lazy" data-background="img/pages/projects/projects-3-1.jpg" >
+                                <div class="swiper-lazy-preloader"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-slider__controls">
+                            <div class="project-slider__fraction fraction-controll">
+                                <span class="fraction-controll__current">01</span> / <span class="fraction-controll__all">0</span>
+                            </div>
+
+                            <div class="swiper__buttons">
+                                <div class="swiper__button swiper__button_prev _icon-slider-arrow-right-2"></div>
+                                <div class="swiper__button swiper__button_next _icon-slider-arrow-right-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h1 class="single-project__title">Торгово-развлекательный центр ОЗ г. Краснодар</h1>
+
+                    <div class="single-project__body">
+                        <div class="single-project__item project-description">
+                            <div class="project-description__caption">описание</div>
+                            <div class="project-description__row border-bottom-0">
+                                <div class="project-description__text _content">
+                                    <p>ТРЦ ОЗ выполнен в сотрудничестве с проектным бюро DYER. Объединяет в себе многоуровневую торговую галерею, кинотеатры, детский развлекательный комплекс.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-project__item project-description">
+                            <div class="project-description__caption">Информация</div>
+
+                            <div class="project-description__row">
+                                <div class="project-description__label"> Адрес </div>
+                                <div class="project-description__value"> г. Краснодар </div>
+                            </div>
+
+                            <div class="project-description__row">
+                                <div class="project-description__label"> Заказчик </div>
+                                <div class="project-description__value"> ООО "ЭЙМ Проперти" </div>
+                            </div>
+
+                            <div class="project-description__row">
+                                <div class="project-description__label"> Площадь </div>
+                                <div class="project-description__value"> 212 000 кв. м </div>
+                            </div>
+
+                            <div class="project-description__row">
+                                <div class="project-description__label"> Поручение </div>
+                                <div class="project-description__value"> Генеральный проектировщик </div>
+                            </div>
+
+                            <div class="project-description__row">
+                                <div class="project-description__label"> Год </div>
+                                <div class="project-description__value"> 2012 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

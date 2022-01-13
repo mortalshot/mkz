@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="services">
+                <div class="services__container">
+                    <h1 class="services__title">Услуги</h1>
+
+                    <div class="services__wrapper" data-sticky="767.98,min" data-sticky-header data-sticky-top="10">
+                        <nav class="services__nav">
+                            <ul class="services__list" data-sticky-item>
+                                <li class="services__item">
+                                    <a href="" data-goto-header data-goto-speed="500" data-goto="#services-block-1"> <span>Проектирование</span> </a>
+                                </li>
+                                <li class="services__item">
+                                    <a href="" data-goto-header data-goto-speed="500" data-goto="#services-block-2"><span>Консультирование</span></a>
+                                </li>
+                                <li class="services__item">
+                                    <a href="" data-goto-header data-goto-speed="500" data-goto="#services-block-3"><span>управление строительством</span></a>
+                                </li>
+                                <li class="services__item">
+                                    <a href="" data-goto-header data-goto-speed="500" data-goto="#services-block-4"><span>Технический заказчик</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="services__content _content">
+                            <div id="services-block-1" class="services__block" data-watch="navigator">
+                                <h3 class="services__block-title services__block-title_bg" style="background-image: url('img/pages/services/services-1.jpg');"><span>Проектирование</span></h3>
+                                <p>Предпроектные подготовки (АГР, АГО, Эскизные проекты)</p>
+                                <p>Подготовка концептуальных решений (Архитектура, конструктивные решения, инженерные решения)</p>
+                                <p>Архитектурное проектирование</p>
+                                <p>Конструктивные решения</p>
+                                <p>Инженерное проектирование</p>
+                                <p>Информационное моделирование (BIM)</p>
+                                <p>Генеральное проектирование (проектная документация, тендерная документация, рабочая документация)</p>
+                                <p>Архитектурные интерьеры и визуализации</p>
+                            </div>
+
+                            <div id="services-block-2" class="services__block" data-watch="navigator">
+                                <h3 class="services__block-title services__block-title_bg" style="background-image: url('img/pages/services/services-2.jpg');"><span>Консультирование</span></h3>
+                                <p>Финансово-технический аудит участков и зданий</p>
+                                <p>Оценка градостроительного потенциала участка</p>
+                                <p>Аудит проектной документации</p>
+                                <p>Выда экспертных заключений</p>
+                                <p>BIM - консультирование</p>
+                            </div>
+
+                            <div id="services-block-3" class="services__block" data-watch="navigator">
+                                <h3 class="services__block-title services__block-title_bg" style="background-image: url('img/pages/services/services-3.jpg');"><span>Управление строительством</span></h3>
+                                <p>Организация и проведение тендеров</p>
+                                <p>Контроль объемов и качества строительства</p>
+                                <p>Аудит проектной документации</p>
+                                <p>Выда экспертных заключений</p>
+                                <p>BIM - консультирование</p>
+                            </div>
+
+                            <div id="services-block-4" class="services__block" data-watch="navigator">
+                                <h3 class="services__block-title services__block-title_bg" style="background-image: url('img/pages/services/services-4.jpg');"><span>Технический заказчик</span></h3>
+                                <p>Оформление исходно-разрешительной документации </p>
+                                <p>Получение разрешения на строительство </p>
+                                <p>Контроль проектно-сметной документации </p>
+                                <p>Технический надзор </p>
+                                <p>Организация сдачи объекта в эксплуатацию и получение ЗОС </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -71,9 +71,85 @@ img {
     border-bottom: 0 !important;
 }
 
+._bg-figure {
+    @include adaptiveValue("padding-top", 16, 8);
+    @include adaptiveValue("padding-bottom", 16, 8);
+    @include adaptiveValue("padding-left", 24, 16);
+    @include adaptiveValue("padding-right", 24, 16);
+    border-radius: rem(1);
+    background-color: #f1f1f1;
+    @include adaptiveValue("margin-top", 40, 32);
+    @include adaptiveValue("margin-bottom", 40, 32);
+
+    a {
+        color: $mainColor;
+        text-decoration: underline transparent from-font;
+        text-underline-offset: 3px;
+        transition: $transition ease text-decoration 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline $mainColor from-font;
+            }
+        }
+    }
+}
+
 ._content {
     p {
         margin: rem(16) 0;
+    }
+
+    ol,
+    ul {
+        display: grid;
+        gap: rem(16);
+        @include adaptiveValue("margin-top", 32, 24);
+        @include adaptiveValue("margin-bottom", 32, 24);
+    }
+
+    ol {
+        counter-reset: item;
+
+        li {
+            position: relative;
+            padding-left: rem(32);
+            list-style-type: none;
+
+            &::before {
+                content: counter(item);
+                counter-increment: item;
+                position: absolute;
+                left: 0;
+            }
+
+            & > ol {
+                counter-reset: subitem;
+
+                li {
+                    &::before {
+                        content: counter(item) "." counters(subitem, ".") " ";
+                        counter-increment: subitem;
+                    }
+                }
+            }
+        }
+
+        ol {
+            margin-top: 16px !important;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    ul {
+        padding-left: rem(16);
+
+        li {
+            list-style-type: disc;
+        }
     }
 
     :first-child {

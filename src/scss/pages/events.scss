@@ -81,15 +81,15 @@
     // .event-card__title
     &__title {
         flex: 1;
+        font-weight: 500;
+        @include adaptiveValue("font-size", 18, 16);
+        line-height: 1.2;
 
         &:not(:last-child) {
             @include adaptiveValue("margin-bottom", 32, 16);
         }
 
         a {
-            font-weight: 500;
-            @include adaptiveValue("font-size", 18, 16);
-            line-height: 1.2;
             text-decoration: underline transparent from-font;
             text-underline-offset: 3px;
             transition: $transition ease text-decoration, $transition opacity 0s;
@@ -199,12 +199,82 @@
             text-decoration: underline transparent from-font;
             text-underline-offset: 3px;
             transition: $transition ease text-decoration 0s;
-            
+
             @media (any-hover: hover) {
                 &:hover {
                     text-decoration: underline $mainColor from-font;
                 }
             }
         }
+    }
+}
+
+// event-single ====================================================================================================
+.event-single {
+    @include adaptiveValue("margin-bottom", 144, 80);
+    &:first-child {
+        @include adaptiveValue("margin-top", 35, 20);
+    }
+
+    // .event-single__container
+    &__container {
+        display: grid;
+        column-gap: rem(20);
+        row-gap: rem(24);
+
+        @media (min-width: $mobileM) {
+            grid-template-columns: percent(280, 1200) 1fr;
+        }
+    }
+
+    // .event-single__body
+    &__body {
+        max-width: rem(700);
+    }
+
+    // .event-single__thumbnail
+    &__thumbnail {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 56, 24);
+        }
+
+        @media (max-width: $mobileSmall) {
+            position: relative;
+            padding-bottom: percent(200, 280);
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    // .event-single__heading
+    &__heading {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 40, 24);
+        }
+        .event-card {
+            // .event-card__date
+            &__date {
+            }
+
+            // .event-card__title
+            &__title {
+                @include adaptiveValue("font-size", 24, 18);
+                line-height: 1.2;
+                text-transform: none;
+            }
+        }
+    }
+
+    // .event-single__content
+    &__content {
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(25, 14);
     }
 }

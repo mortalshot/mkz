@@ -1,0 +1,212 @@
+// bim ====================================================================================================
+.bim {
+    .company {
+        // .company__container
+        &__container {
+        }
+
+        // .company__title
+        &__title {
+        }
+
+        // .company__text
+        &__text {
+        }
+    }
+
+    // .bim__gallery
+    &__gallery {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+        column-gap: rem(10);
+        row-gap: rem(20);
+    }
+
+    // .bim__image
+    &__image {
+        position: relative;
+        padding-bottom: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+// mkz ====================================================================================================
+.mkz-feature {
+    display: grid;
+    grid-template-rows: rem(40) 1fr;
+    @include adaptiveValue("row-gap", 32, 24);
+
+    // .mkz-feature__icon
+    &__icon {
+        position: relative;
+        padding-bottom: rem(40);
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: left;
+        }
+    }
+
+    // .mkz-feature__caption
+    &__caption {
+    }
+}
+
+.mkz {
+    @include adaptiveValue("margin-top", 144, 80);
+    @include adaptiveValue("margin-bottom", 100, 32);
+
+    // .mkz__container
+    &__container {
+    }
+
+    // .mkz__title
+    &__title {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 60, 40);
+        }
+    }
+
+    // .mkz__row
+    &__row {
+        display: grid;
+        row-gap: rem(48);
+        @include adaptiveValue("column-gap", 100, 20, 1280, 992);
+
+        @media (min-width: $tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    // .mkz__features
+    &__features {
+        display: flex;
+        flex-wrap: wrap;
+        margin: rem(-20);
+    }
+
+    // .mkz__feauture
+    &__feauture {
+        flex: 1 0 50%;
+        padding: rem(20);
+
+        @media (max-width: $mobile) {
+            flex: 0 0 100%;
+        }
+    }
+
+    // .mkz__image
+    &__image {
+    }
+}
+
+// hover-image ====================================================================================================
+.hover-image {
+    background-color: $mainColor;
+    color: $White;
+    @include adaptiveValue("padding-top", 120, 80);
+    @include adaptiveValue("padding-bottom", 120, 80);
+    @include adaptiveValue("margin-top", 120, 64);
+    @include adaptiveValue("margin-bottom", 120, 64);
+
+    // .hover-image__container
+    &__container {
+        display: grid;
+        align-items: center;
+        @include adaptiveValue("row-gap", 64, 32);
+        column-gap: rem(20);
+        max-width: rem(1200);
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: $tablet) {
+            grid-template-columns: 1fr percent(339, 1200);
+        }
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+
+    // .hover-image__content
+    &__content {
+    }
+
+    // .hover-image__title
+    &__title {
+        max-width: rem(697);
+
+        @media (max-width: $tablet) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    // .hover-image__image
+    &__image {
+        @media (max-width: $tablet) {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            display: grid;
+            justify-content: center;
+        }
+
+        img {
+            @media (max-width: $mobileM) {
+                max-width: rem(190);
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @media (any-hover: hover) {
+                filter: grayscale(1);
+                transition: $transition ease filter 0s;
+
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+        }
+    }
+}
+
+// text-accent ====================================================================================================
+.text-accent {
+    @include adaptiveValue("margin-top", 144, 80);
+    @include adaptiveValue("margin-bottom", 100, 80);
+
+    // .text-accent__container
+    &__container {
+        max-width: rem(1040);
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    // .text-accent__title
+    &__title {
+        @include adaptiveValue("font-size", 40, 16);
+        line-height: math.div(56, 40);
+        span {
+            color: $White;
+            background-color: $mainColor;
+            border-radius: em(70, 40);
+            padding: em(2, 40) em(14, 40);
+            white-space: nowrap;
+        }
+    }
+}

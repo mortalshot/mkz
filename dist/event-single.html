@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220114103248">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220117103453">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,6 +46,55 @@
 					</div>
 				</div>
 
+				<div class="search-menu" data-fullscreen>
+					<div class="search-menu__wrapper">
+						<div class="search-menu__heading">
+							<div class="search-menu__logo logo">
+								<a href="" class="logo__link">
+									<div class="logo__icon"> <img src="img/icons/logo.svg" alt="Проектное бюро" loading="lazy"> </div>
+									<div class="logo__title">Проектное <br> бюро</div>
+								</a>
+							</div>
+
+							<button type="button" class="search-menu__close"><span class="_icon-close"></span></button>
+						</div>
+
+						<form action="" class="search-menu__form search-form">
+							<div class="search-form__input">
+								<input id="search-input" autocomplete="off" type="text" name="form[]" placeholder="Текст поиска" class="input">
+								<button type="reset" class="search-form__reset"><span class="_icon-close"></span></button>
+							</div>
+							<label for="search-input" class="search-form__label">Введите запрос и нажмите ENTER</label>
+						</form>
+
+
+						<div class="search-menu__result search-result">
+							<div class="search-result__title">Результат поиска (<span>4</span>)</div>
+							<div class="search-result__category">
+								<div class="search-result__caption">Проекты (<span>0</span>)</div>
+							</div>
+							<div class="search-result__category">
+								<div class="search-result__caption">Услуги (<span>1</span>)</div>
+								<div class="search-result__link">
+									<a href="" class="_icon-link"><span>Проектирование</span></a>
+								</div>
+							</div>
+							<div class="search-result__category">
+								<div class="search-result__caption">Статьи (<span>1</span>)</div>
+								<div class="search-result__link">
+									<a href="" class="_icon-link"><span>Новый проект одобрен мэрией москвы</span></a>
+								</div>
+								<div class="search-result__link">
+									<a href="" class="_icon-link"><span>Наши проеты стали еще качественней</span></a>
+								</div>
+								<div class="search-result__link">
+									<a href="" class="_icon-link"><span>Ещё одна статья</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="logo">
 					<a href="" class="logo__link">
 						<div class="logo__icon"> <img src="img/icons/logo.svg" alt="Проектное бюро" loading="lazy"> </div>
@@ -62,7 +111,7 @@
 						<li class="language__item"> <a href="">FR</a> </li>
 					</ul>
 
-					<div class="header__search"> <a href="" class="_icon-search"></a> </div>
+					<div class="header__search"> <button type="button" class="search-menu__button _icon-search"></button> </div>
 
 					<button type="button" class="icon-menu"><span></span></button>
 				</div>
@@ -139,7 +188,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220114103248"></script>
+	<script src="js/app.min.js?_v=20220117103453"></script>
 </body>
 
 </html>

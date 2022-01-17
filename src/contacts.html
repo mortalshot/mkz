@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Контакты"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="contacts-section">
+                <div class="contacts-section__container">
+                    <h1 class="contacts-section__title">Контакты</h1>
+
+                    <div class="contacts-section__row">
+                        <div class="contacts-section__map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.9187955023444!2d37.63233831630897!3d55.77728218055992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a7188d1e9dd%3A0x8393a3a27e78ea93!2z0L_RgC3RgiDQnNC40YDQsCwgMjYg0YHRgtGA0L7QtdC90LjQtSA1LCDQnNC-0YHQutCy0LAsIDEyOTA5MA!5e0!3m2!1sru!2sru!4v1642145762997!5m2!1sru!2sru" style="border:0;" allowfullscreen="false" loading="lazy"></iframe>
+                        </div>
+                        <ul class="contacts-section__contacts">
+                            <li class="contacts__item"><a href="tel:+74959378807" class="contacts__link">+7 (495) 937–88–07</a></li>
+                            <li class="contacts__item"><a href="mailto:info@mk3.ru" class="contacts__link">info@mk3.ru</a></li>
+                            <li class="contacts__item">
+                                <div class="contacts__link">Москва, Проспект Мира 26, стр. 5</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

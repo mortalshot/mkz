@@ -797,7 +797,7 @@
   function M(e, t, s) {
     e.style.setProperty(t, s);
   }
-  function P({ swiper: e, targetPosition: t, side: s }) {
+  function L({ swiper: e, targetPosition: t, side: s }) {
     const i = m(),
       n = -e.translate;
     let a,
@@ -826,11 +826,11 @@
       };
     c();
   }
-  let L, O, A;
+  let P, O, A;
   function z() {
     return (
-      L ||
-        (L = (function () {
+      P ||
+        (P = (function () {
           const e = m(),
             t = u();
           return {
@@ -855,7 +855,7 @@
             gestures: "ongesturestart" in e,
           };
         })()),
-      L
+      P
     );
   }
   function I(e = {}) {
@@ -1537,7 +1537,7 @@
         else {
           if (!a.support.smoothScroll)
             return (
-              P({ swiper: a, targetPosition: -c, side: e ? "left" : "top" }), !0
+              L({ swiper: a, targetPosition: -c, side: e ? "left" : "top" }), !0
             );
           l.scrollTo({ [e ? "left" : "top"]: -c, behavior: "smooth" });
         }
@@ -1688,7 +1688,7 @@
         } else {
           if (!a.support.smoothScroll)
             return (
-              P({ swiper: a, targetPosition: s, side: e ? "left" : "top" }), !0
+              L({ swiper: a, targetPosition: s, side: e ? "left" : "top" }), !0
             );
           h.scrollTo({ [e ? "left" : "top"]: s, behavior: "smooth" });
         }
@@ -2029,7 +2029,7 @@
     }
     t.emit("touchStart", o);
   }
-  function j(e) {
+  function q(e) {
     const t = u(),
       s = this,
       i = s.touchEventsData,
@@ -2188,7 +2188,7 @@
       s.updateProgress(i.currentTranslate),
       s.setTranslate(i.currentTranslate));
   }
-  function q(e) {
+  function j(e) {
     const t = this,
       s = t.touchEventsData,
       { params: i, touches: n, rtlTranslate: a, slidesGrid: r, enabled: l } = t;
@@ -2378,8 +2378,8 @@
           t = u(),
           { params: s, support: i } = e;
         (e.onTouchStart = V.bind(e)),
-          (e.onTouchMove = j.bind(e)),
-          (e.onTouchEnd = q.bind(e)),
+          (e.onTouchMove = q.bind(e)),
+          (e.onTouchEnd = j.bind(e)),
           s.cssMode && (e.onScroll = Y.bind(e)),
           (e.onClick = R.bind(e)),
           i.touch && !X && (t.addEventListener("touchstart", U), (X = !0)),
@@ -4845,6 +4845,20 @@
           });
     });
   new we("max").init(),
+    (function () {
+      let e = document.querySelector(".search-menu__button");
+      e &&
+        e.addEventListener("click", function (e) {
+          i && (a(), document.documentElement.classList.add("search-open"));
+        });
+    })(),
+    (function () {
+      let e = document.querySelector(".search-menu__close");
+      e &&
+        e.addEventListener("click", function (e) {
+          n(), document.documentElement.classList.remove("search-open");
+        });
+    })(),
     (window.FLS = !0),
     (function (e) {
       let t = new Image();

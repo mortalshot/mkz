@@ -1,0 +1,95 @@
+.contacts-section {
+    @include adaptiveValue("margin-bottom", 144, 80);
+    &:first-child {
+        @include adaptiveValue("margin-top", 35, 20);
+    }
+
+    // .contacts-section__container
+    &__container {
+    }
+
+    // .contacts-section__title
+    &__title {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 60, 40);
+        }
+    }
+
+    // .contacts-section__row
+    &__row {
+        display: grid;
+        column-gap: rem(20);
+        row-gap: rem(40);
+
+        @media (min-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    // .contacts-section__map
+    &__map {
+        padding-bottom: percent(400, 280);
+        position: relative;
+
+        @media (min-width: $mobileSmall) {
+            padding-bottom: percent(400, 350);
+        }
+        @media (min-width: $mobileM) {
+            padding-bottom: percent(400, 500);
+        }
+        @media (min-width: $mobile) {
+            padding-bottom: percent(330, 708);
+        }
+        @media (min-width: $tablet) {
+            padding-bottom: 0;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .contacts-section__contacts
+    &__contacts {
+        @media (max-width: $mobile) {
+            grid-row: 1;
+            grid-row-end: 2;
+        }
+
+        .contacts {
+            // .contacts__item
+            &__item {
+                @include adaptiveValue("padding-top", 64, 24);
+                @include adaptiveValue("padding-bottom", 64, 24);
+                border-top: 1px solid $Line;
+
+                &:last-child {
+                    border-bottom: 1px solid $Line;
+                }
+            }
+            // .contacts__link
+            &__link {
+                font-weight: 300;
+                @include adaptiveValue("font-size", 34, 18);
+                line-height: 1;
+
+                &:link {
+                    text-decoration: underline transparent from-font;
+                    text-underline-offset: 3px;
+                    transition: $transition ease text-decoration 0s;
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            text-decoration: underline $mainColor from-font;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
